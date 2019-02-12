@@ -1,0 +1,111 @@
+<div class="form-container">
+
+  <form [formGroup]="studentForm" class="form-group">
+    <h3>Your Info:</h3>
+    <div class="form-group">
+      <label for="firstNameId">First Name</label>
+      <input id="firstNameId" type="text"
+              class="form-control"
+              placeholder="First Name"
+              formControlName="firstName"
+              required />
+      <label for="lastNameId">Last Name</label>
+      <input id="lastNameId" type="text"
+              class="form-control"
+              placeholder="Last Name"
+              formControlName="lastName"
+              required />
+      <label for="email">Email</label>
+      <input id="email" type="email"
+              class="form-control"
+              placeholder="Email"
+              formControlName="email"
+              required />
+    </div>
+    <div class="form-group">
+      <label for="firstChoice">First Choice</label>
+      <select class="form-control form-control-sm" id="firstChoice" formControlName="firstChoice">
+        <option value="">Select your First Choice</option>
+        <option value="Cheyene">Cheyenne</option>
+        <option value="Denver">Denver</option>
+        <option value="North Denver">North Denver</option>
+        <option value="Colorado Springs">Colorado Springs</option>
+        <option value="Grand Junction">Grand Junction</option>
+        <option value="Greeley">Greeley</option>
+        <option value="Pueblo">Pueblo</option>
+        <option value="Casper">Casper</option>
+        <option value="Show Low">Show Low</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="secondChoice">Second Choice</label>
+      <select class="form-control form-control-sm" id="secondChoice" formControlName="secondChoice">
+        <option value="">Select your Second Choice</option>
+        <option value="Cheyene">Cheyenne</option>
+        <option value="Denver">Denver</option>
+        <option value="North Denver">North Denver</option>
+        <option value="Colorado Springs">Colorado Springs</option>
+        <option value="Grand Junction">Grand Junction</option>
+        <option value="Greeley">Greeley</option>
+        <option value="Pueblo">Pueblo</option>
+        <option value="Casper">Casper</option>
+        <option value="Show Low">Show Low</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="thirdChoice">Third Choice</label>
+      <select class="form-control form-control-sm" id="thirdChoice" formControlName="thirdChoice">
+        <option value="">Select your Third Choice</option>
+        <option value="Cheyene">Cheyenne</option>
+        <option value="Denver">Denver</option>
+        <option value="North Denver">North Denver</option>
+        <option value="Colorado Springs">Colorado Springs</option>
+        <option value="Grand Junction">Grand Junction</option>
+        <option value="Greeley">Greeley</option>
+        <option value="Pueblo">Pueblo</option>
+        <option value="Casper">Casper</option>
+        <option value="Show Low">Show Low</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="fourthChoice">Fourth Choice</label>
+      <select class="form-control form-control-sm" id="fourthChoice" formControlName="fourthChoice">
+        <option value="">Select your Fourth Choice</option>
+        <option value="Cheyene">Cheyenne</option>
+        <option value="Denver">Denver</option>
+        <option value="North Denver">North Denver</option>
+        <option value="Colorado Springs">Colorado Springs</option>
+        <option value="Grand Junction">Grand Junction</option>
+        <option value="Greeley">Greeley</option>
+        <option value="Pueblo">Pueblo</option>
+        <option value="Casper">Casper</option>
+        <option value="Show Low">Show Low</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="fifthChoice">Fifth Choice</label>
+      <select class="form-control form-control-sm" id="fifthChoice" formControlName="fifthChoice">
+        <option value="">Select your Fifth Choice</option>
+        <option value="Cheyene">Cheyenne</option>
+        <option value="Denver">Denver</option>
+        <option value="North Denver">North Denver</option>
+        <option value="Colorado Springs">Colorado Springs</option>
+        <option value="Grand Junction">Grand Junction</option>
+        <option value="Greeley">Greeley</option>
+        <option value="Pueblo">Pueblo</option>
+        <option value="Casper">Casper</option>
+        <option value="Show Low">Show Low</option>
+      </select>
+    </div>
+    <button class="btn btn-primary" type="submit"
+            [disabled]="!studentForm.valid"
+            (click)="onSubmit(studentForm.value)"
+            >
+      Submit Your Choices
+    </button>
+    <p>
+      Form Status: {{ studentForm.value }}
+    </p>
+  </form>
+</div>
+
