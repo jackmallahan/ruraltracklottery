@@ -1,7 +1,6 @@
 <div class="form-container">
 
   <form [formGroup]="studentForm" class="form-group">
-    <h3>Your Info:</h3>
     <div class="form-group">
       <label for="firstNameId">First Name</label>
       <input id="firstNameId" type="text"
@@ -103,9 +102,9 @@
             >
       Submit Your Choices
     </button>
-    <p>
-      Form Status: {{ studentForm.value }}
-    </p>
+    <div class="alert alert-success" role="alert" *ngIf="message">
+      {{message}}
+    </div>
   </form>
 </div>
 

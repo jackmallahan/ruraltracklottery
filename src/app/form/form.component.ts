@@ -12,6 +12,7 @@ import { Observable } from 'rxjs';
 export class FormComponent implements OnInit {
   studentForm: FormGroup;
   public students: Observable<Student[]>;
+  message: string;
 
   constructor(
     private firebaseService: FirebaseService,
@@ -23,6 +24,7 @@ export class FormComponent implements OnInit {
       .then(
         res => {
           this.studentForm.reset();
+          this.message = 'Selections Submitted'
         }
       );
   }
